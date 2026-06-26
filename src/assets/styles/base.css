@@ -1,0 +1,32 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Pretendard', -apple-system, BlinkMacSystemFont, system-ui, Roboto, sans-serif;
+  color: var(--ink);
+  background-color: var(--bg);
+  font-size: 14px;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+  
+  /* 반응형 컨테이너 최소폭 설정 (1280px 미만 시 스크롤바) */
+  min-width: 1280px;
+  overflow-x: auto;
+}
+
+input, button, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}

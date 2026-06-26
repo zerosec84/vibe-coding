@@ -1,0 +1,206 @@
+/* 카드 (Card) */
+.card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--r-md);
+  margin-bottom: 16px;
+  overflow: hidden;
+}
+.card.pad {
+  padding: 16px;
+}
+
+/* 버튼 (Buttons) */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  padding: 8px 16px;
+  transition: background 0.2s;
+}
+.btn.primary {
+  background: var(--teal);
+  color: #fff;
+}
+.btn.primary:hover {
+  background: var(--teal-600);
+}
+.btn.ghost {
+  border: 1px solid var(--line);
+  background: #fff;
+  color: var(--ink-2);
+}
+.btn.sm {
+  padding: 4px 10px;
+  font-size: 12px;
+}
+
+/* 폼 텍스트 입력창 & 셀렉트 (Form Input / Field) */
+.fld {
+  margin-bottom: 14px;
+}
+.fld label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: var(--ink-2);
+  margin-bottom: 6px;
+}
+.inp {
+  display: flex;
+  align-items: center;
+  background: var(--field);
+  border-radius: var(--r-sm);
+  padding: 8px 12px;
+  height: 38px;
+}
+.inp input {
+  flex: 1;
+  width: 100%;
+}
+.inp.w {
+  background: #fff;
+  border: 1px solid var(--line);
+}
+
+/* 칩 & 배지 (Chips, Badge) */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  background: var(--line-2);
+  padding: 4px 10px;
+  font-size: 12px;
+  border-radius: var(--r-pill);
+  gap: 6px;
+}
+.chip .x {
+  cursor: pointer;
+  color: var(--muted);
+}
+.st {
+  display: inline-flex;
+  padding: 2px 6px;
+  font-size: 11px;
+  font-weight: 700;
+  border-radius: var(--r-sm);
+}
+.st.prog { background: var(--blue-bg); color: var(--blue); }
+.st.done { background: var(--green-bg); color: var(--green); }
+.st.recv { background: var(--gray-bg); color: var(--gray); }
+.st.rej  { background: var(--red-bg); color: var(--red); }
+.st.delay { background: var(--orange-bg); color: var(--orange); }
+
+.selmini {
+  display: inline-flex;
+  padding: 3px 8px;
+  background: var(--line-2);
+  border-radius: var(--r-sm);
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* 링크 & 텍스트 효과 */
+.lk { color: var(--blue); cursor: pointer; font-weight: 600; }
+.lk:hover { text-decoration: underline; }
+.muted { color: var(--muted); }
+
+/* 프로그레스 바 */
+.prog-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: bold;
+}
+.bar {
+  flex: 1;
+  height: 6px;
+  background: var(--line-2);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+.bar i {
+  position: absolute; left: 0; top: 0; height: 100%;
+  background: var(--teal);
+}
+
+/* 공통 테이블 */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+th {
+  background: var(--bg);
+  color: var(--ink-2);
+  font-weight: 600;
+  font-size: 12px;
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+}
+td {
+  padding: 12px;
+  border-bottom: 1px solid var(--line-2);
+}
+tr.click { cursor: pointer; }
+tr.click:hover { background: var(--bg); }
+
+/* 페이지네이션 (Pager) */
+.pager {
+  display: flex;
+  justify-content: center;
+  gap: 4px;
+  padding: 16px;
+}
+.pg {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid var(--line);
+  background: #fff;
+  border-radius: var(--r-sm);
+  cursor: pointer;
+  font-size: 12px;
+}
+.pg.on {
+  background: var(--ink);
+  color: #fff;
+  border-color: var(--ink);
+}
+
+/* 모달 팝업 레이어 스타일 (Modal) */
+.modalScrim {
+  position: fixed;
+  inset: 0;
+  background: rgba(31, 42, 48, 0.6);
+  display: none; /* 기본적으로 숨김, .show 붙으면 보임 */
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.modalScrim.show {
+  display: flex;
+}
+.modal {
+  background: #fff;
+  border-radius: var(--r-lg);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+.modal .mh {
+  padding: 16px 20px;
+  border-bottom: 1px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal .mh .t { font-size: 16px; font-weight: 700; }
+.modal .mh .close { cursor: pointer; color: var(--muted); font-size: 18px; }
+.modal .mb { padding: 20px; max-height: 80vh; overflow-y: auto; }
+.modal .mf { padding: 14px 20px; background: var(--bg); border-top: 1px solid var(--line); display: flex; justify-content: flex-end; gap: 8px; }
